@@ -1,0 +1,190 @@
+:root {
+  --color-primary: #d35400;
+  --color-accent: #f76b1c;
+}
+
+/* Fondo de navegador con imagen + degradado */
+body {
+  font-family: 'Georgia', serif;
+  background-image: 
+
+  linear-gradient(135deg, #f9f5f0, #f0e6dc);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 40% auto;
+  background-attachment: fixed;
+  color: #4a2e0d;
+  min-height: 100vh;
+  margin: 0;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Contenedor general (sin fondo para recetas) */
+.container.py-4.text-center {
+  max-width: 720px;
+  padding: 3.5rem 2rem 4rem;
+}
+
+/* --- PORTADA CON IMAGEN DE FONDO --- */
+.portada-con-fondo {
+  background-color: transparent;
+  border-radius: 16px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+  position: relative;
+  color: white;
+  height: 480px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
+/* Capa semitransparente para mejor lectura */
+.portada-overlay {
+  background-color: rgba(0, 0, 0, 0.35);
+  padding: 3rem 2rem;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 700px;
+}
+
+/* Títulos con sombra y tamaño que abarca más */
+.titulo-principal {
+  font-weight: 700;
+  font-size: 4.5rem;
+  letter-spacing: 3px;
+  font-style: italic;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+.subtitulo-principal {
+  font-size: 2.2rem;
+  font-style: italic;
+  margin-bottom: 3.5rem;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  letter-spacing: 1.2px;
+  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.6);
+}
+
+/* Botón portada brillante */
+.btn.btn-lg.btn-warning.fw-bold.px-5.py-3.boton-brillante {
+  background: linear-gradient(45deg, #d46a00, #bb5300);
+  box-shadow: 0 6px 14px #d46a0066;
+  border-radius: 20px;
+  font-size: 1.6rem;
+  letter-spacing: 2.5px;
+  transition: all 0.3s ease;
+  text-shadow: 0 1px 2px #5e2c00;
+  border: none;
+  cursor: pointer;
+}
+
+.btn.btn-lg.btn-warning.fw-bold.px-5.py-3.boton-brillante:hover {
+  background: linear-gradient(45deg, #bb5300, #d46a00);
+  box-shadow: 0 12px 28px #d46a0099;
+  transform: scale(1.1);
+  text-shadow: 0 2px 5px #7a3d00;
+}
+
+/* --- ESTILOS PARA LAS RECETAS --- */
+.row.justify-content-center.g-4 {
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Tarjetas recetas */
+.card.h-100.shadow {
+  border-radius: 16px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.card.h-100.shadow:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.25);
+}
+
+/* Imagen fija para las recetas, tamaño consistente */
+.receta-imagen-fija {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-bottom: 3px solid var(--color-primary);
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+/* Cuerpo de la tarjeta */
+.card-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Título receta */
+.card-title {
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+/* Texto de descripción */
+.card-text {
+  color: #4a4a4a;
+  margin-bottom: 1rem;
+}
+
+/* Botón en tarjeta */
+.btn-outline-warning {
+  font-weight: 600;
+}
+
+/* Detalles receta */
+.alert.alert-light {
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  border-radius: 12px;
+}
+
+/* Botones secundarios */
+.btn-sm.btn-secondary {
+  font-weight: 600;
+}
+
+/* Animaciones */
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+} 
